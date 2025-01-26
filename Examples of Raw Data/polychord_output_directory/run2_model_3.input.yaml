@@ -1,0 +1,42 @@
+likelihood:
+  likelihood_CAMB: true
+prior:
+  function: true
+params:
+  omega_c:
+    prior:
+      dist: norm
+      loc: 0.25
+      scale: 0.01
+    latex: \Omega_{c}
+  n_s:
+    prior:
+      dist: norm
+      loc: 0.965
+      scale: 0.004
+    latex: n_{s}
+  lnas:
+    prior:
+      dist: norm
+      loc: 3.044
+      scale: 0.014
+    latex: \ln(10^{10}A_{s})
+  w0:
+    prior:
+      dist: norm
+      loc: -1
+      scale: 0.3
+    latex: w_{0}
+  wa:
+    prior:
+      dist: norm
+      loc: 0
+      scale: 0.5
+    latex: w_{a}
+sampler:
+  polychord:
+    path: /Users/seanyi/Documents/polychord/PolyChordLite
+    nlive: 64
+    num_repeats: 5
+    precision_criterion: 0.1
+output: run2_model_3

@@ -1,0 +1,89 @@
+theory: null
+likelihood:
+  likelihood_CAMB:
+    type: []
+    speed: -1
+    stop_at_error: false
+    version: null
+    external: true
+    input_params:
+    - omega_c
+    - n_s
+    - lnas
+    - w0
+    - wa
+    output_params: []
+prior:
+  function: true
+params:
+  omega_c:
+    prior:
+      dist: norm
+      loc: 0.25
+      scale: 0.01
+    latex: \Omega_{c}
+  n_s:
+    prior:
+      dist: norm
+      loc: 0.965
+      scale: 0.004
+    latex: n_{s}
+  lnas:
+    prior:
+      dist: norm
+      loc: 3.044
+      scale: 0.014
+    latex: \ln(10^{10}A_{s})
+  w0:
+    prior:
+      dist: norm
+      loc: -1
+      scale: 0.3
+    latex: w_{0}
+  wa:
+    prior:
+      dist: norm
+      loc: 0
+      scale: 0.5
+    latex: w_{a}
+sampler:
+  polychord:
+    path: /Users/seanyi/Documents/polychord/PolyChordLite
+    nlive: 64
+    num_repeats: 5
+    nprior: 10nlive
+    nfail: nlive
+    do_clustering: true
+    precision_criterion: 0.1
+    max_ndead: .inf
+    compression_factor: 0.36787944117144233
+    callback_function: null
+    logzero: -1.0e+30
+    boost_posterior: 0
+    feedback: null
+    synchronous: true
+    nlives: null
+    maximise: false
+    measure_speeds: true
+    oversample_power: 0.4
+    blocking:
+    - - 1
+      - - omega_c
+        - n_s
+        - lnas
+        - w0
+        - wa
+    confidence_for_unbounded: 0.9999995
+    seed: null
+    posteriors: true
+    equals: true
+    cluster_posteriors: true
+    write_resume: true
+    read_resume: true
+    write_stats: true
+    write_live: true
+    write_dead: true
+    write_prior: true
+    version: null
+output: run2_model_3
+version: 3.5.3

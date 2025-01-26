@@ -1,0 +1,6 @@
+﻿omega_c	\Omega_{c}
+n_s	n_{s}
+lnas	a_{s}
+m_nu	m_{\nu}
+logprior__0*	\log\pi_\mathrm{0}
+loglike__likelihood_CAMB*	\log\mathcal{L}_\mathrm{likelihood\ CAMB}
